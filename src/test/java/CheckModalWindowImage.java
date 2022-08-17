@@ -1,4 +1,4 @@
-import WebDriverFactory.WebDriverChromeOptions;
+import webDriverFactory.WebDriverChromeOptions;
 import baseTests.DefaultUItest;
 import org.apache.logging.log4j.LogManager;
 import org.junit.Assert;

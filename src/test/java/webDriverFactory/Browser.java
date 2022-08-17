@@ -1,4 +1,4 @@
-package WebDriverFactory;
+package webDriverFactory;
 
 public enum Browser {
     chrome,

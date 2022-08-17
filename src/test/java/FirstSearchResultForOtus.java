@@ -1,5 +1,5 @@
-import Pages.MainPage;
-import WebDriverFactory.WebDriverChromeOptions;
+import pages.MainPage;
+import webDriverFactory.WebDriverChromeOptions;
 import baseTests.DefaultUItest;
 import org.apache.logging.log4j.LogManager;
 import org.junit.Assert;
