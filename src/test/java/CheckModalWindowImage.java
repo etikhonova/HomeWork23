@@ -1,3 +1,4 @@
+import pages.W3layoutsPage;
 import webDriverFactory.WebDriverChromeOptions;
 import baseTests.DefaultUItest;
 import org.apache.logging.log4j.LogManager;
@@ -20,13 +21,9 @@ public class CheckModalWindowImage extends DefaultUItest {
     }
     @Test
     public void ifWindowIsModal (){
-        driver.get("https://demo.w3layouts.com/demos_new/template_demo/03-10-2020/photoflash-liberty-demo_Free/685659620/web/index.html?_ga=2.181802926.889871791.1632394818-2083132868.1632394818");
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-        WebElement imageClickWait = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='image-zoom']")));
-        imageClickWait.click();
-        WebElement closeButtonWait = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='pp_fade']//a[@class='pp_close']")));
-        System.out.println(driver.findElement(By.xpath("//div[@class='pp_fade']//a[@class='pp_close']")).getText());
-        Assert.assertEquals("Close",closeButtonWait.getText());
+
+        W3layoutsPage w3layoutsPage = new W3layoutsPage(driver);
+        Assert.assertEquals("Close", w3layoutsPage.open(driver).imageClick().getCloseButtonName());
 
     }
 }

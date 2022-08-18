@@ -19,7 +19,7 @@ public class GetCookiesAfterLogin extends DefaultUItest {
         logger.info("driver started");
     }
     @Test
-    public void GetCookies () {
+    public void getCookies () {
         org.apache.logging.log4j.Logger logger = LogManager.getLogger(GetCookiesAfterLogin.class);
         driver.get("https://otus.ru/");
         logger.info("auth");
