@@ -24,7 +24,7 @@ public class MainPage extends DefaultPage {
     }
 
     public MainPage open (){
-        driver.get("https://duckduckgo.com/");
+        driver.get(reader.getProperty("duckduckgo.link"));
         return this;
     }
 }

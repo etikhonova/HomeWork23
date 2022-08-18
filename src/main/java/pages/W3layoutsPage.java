@@ -1,5 +1,5 @@
 package pages;
-
+import helpers.PropertiesReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,7 +17,7 @@ public class W3layoutsPage extends DefaultPage{
     }
 
     public W3layoutsPage open (WebDriver driver){
-        driver.get("https://demo.w3layouts.com/demos_new/template_demo/03-10-2020/photoflash-liberty-demo_Free/685659620/web/index.html?_ga=2.181802926.889871791.1632394818-2083132868.1632394818");
+        driver.get(reader.getProperty("w3layoutsPage.link"));
         return new W3layoutsPage(driver);
     }
 

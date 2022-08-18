@@ -36,8 +36,8 @@ public class GetCookiesAfterLogin extends DefaultUItest {
         WebElement loginEmailWait =wait.
                  until(ExpectedConditions
                        .elementToBeClickable(By.xpath("//form[@action='/login/']//input[@name='email']")));
-        loginEmailWait.sendKeys("hell_me@list.ru");
-    driver.findElement(By.xpath("//form[@action='/login/']//input[@name='password']")).sendKeys("Ee12345!");
+        loginEmailWait.sendKeys(reader.getProperty("otus.login"));
+    driver.findElement(By.xpath("//form[@action='/login/']//input[@name='password']")).sendKeys(reader.getProperty("otus.password"));
     driver.findElement(By.xpath("//form[@action='/login/']//button[@type='submit']")).click();
     }
 }

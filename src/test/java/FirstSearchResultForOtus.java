@@ -1,3 +1,4 @@
+import helpers.PropertiesReader;
 import pages.MainPage;
 import webDriverFactory.WebDriverChromeOptions;
 import baseTests.DefaultUItest;
@@ -17,8 +18,7 @@ public class FirstSearchResultForOtus  extends DefaultUItest {
     }
     @Test
     public void SearchResultForOtus(){
-
         String title = new MainPage(driver).open().searchByText("Otus").getFirstLinkUrl();
-        Assert.assertEquals(title,"https://otus.com/");
+        Assert.assertEquals(title,reader.getProperty("otus.main.link"));
     }
 }
