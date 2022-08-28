@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SearchPage extends DefaultPage {
 
-    private By firstLink = By.xpath("//article[@id='r1-0']/div/div/a");
+    private By firstLink = By.xpath("//article[@id='r1-0']//a[@target]");
 
     public SearchPage (WebDriver driver) {
         this.driver= driver;

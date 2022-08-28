@@ -22,19 +22,19 @@ public class CheckModalWindowImageTest extends DefaultUItest {
     }
     @Test
     public void ifModalWindowPresent (){
-        By modalWindiow = By.xpath("//div[@class='pp_pic_holder light_rounded']");
+        By modalWindow = By.xpath("//div[@class='pp_pic_holder light_rounded']");
         org.apache.logging.log4j.Logger logger = LogManager.getLogger(CheckModalWindowImageTest.class);
         W3layoutsPage w3layoutsPage = new W3layoutsPage(driver);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         try {
             logger.info("Ждем модельное окно до нажатия на картинку");
-            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(driver.findElement(modalWindiow)));
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(driver.findElement(modalWindow)));
             }
         catch (NoSuchElementException e) {
             logger.info("нет модального окна, можно жать на картинку");
             w3layoutsPage.open(driver).imageClick();
-            wait.until(ExpectedConditions.visibilityOf(driver.findElement(modalWindiow)));
-            Assert.assertTrue(driver.findElement(modalWindiow).isDisplayed());
+            wait.until(ExpectedConditions.visibilityOf(driver.findElement(modalWindow)));
+            Assert.assertTrue(driver.findElement(modalWindow).isDisplayed());
         }
     }
 }
